@@ -1,0 +1,244 @@
+:root {
+    --main-dark-color: #8a2d38;
+    --main-dark-color-lighter: #ac3a47;
+    --secondary-dark-color: #0a2239;
+    --main-light-color: #ffffff;
+    --secondary-light-color: #fff3dc;
+    --complement-color: #F7ECE1;
+    --title-font: 'Tomorrow', sans-serif;
+    --text-font: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--main-light-color);
+    margin: 0;
+    position: relative;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+/* ----- HEADER - TOP ----- */
+.header{
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--main-dark-color);
+    padding: 0 1rem;
+    font-size: .9rem;
+    
+    
+}
+
+.header__top__title {
+
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: var(--main-light-color);
+}
+
+.header__top__menu-button {
+    font-family: var(--title-font);
+    font-size: 1rem;
+    color: var(--main-light-color);
+}
+
+.header__top__logo {
+    max-width: 50px;
+    display: none;
+}
+
+/* ----- HEADER - NAV ----- */
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+}
+
+.header__nav__ul {
+    font-family: var(--text-font);
+    background-color: var(--main-dark-color);
+    width: 100vw;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+}
+
+.header__nav__ul>li {
+    background-color: var(--main-dark-color);
+    list-style: none;
+    padding: .3rem 0 .3rem 1.5rem;
+}
+
+.header__nav__ul>li>a {
+    color: var(--main-light-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.header__nav__ul>li:hover {
+    background-color: var(--main-dark-color-lighter);   
+    background-origin: border-box;
+    font-weight: bold;
+}
+
+/* ----- MAIN - CAROUSEL ----- */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 0 0;
+}
+
+.main__carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+    z-index: 2;
+    background-image: url(./../images/petanque.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.main__carousel::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.70), transparent);
+    background-origin: padding-box;
+}
+
+.main__carousel,
+.main__carousel::before {
+    width: 95vw;
+    max-width: 95vw;
+    height: 20vh;
+    max-height: 20vh;
+}
+
+.main__carousel__title-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    /* position: relative; */
+    z-index: 2;
+    padding-top: 3rem;
+    margin-bottom: 0;
+    color: var(--complement-color);
+}
+
+.main__carousel__title-date>* {
+    margin-top: 4.5rem;
+    font-weight: bold;
+    font-family: var(--text-font);
+
+
+}
+
+.main__carousel__title-date h3:first-child {
+    margin: 0 1rem 0 0;
+}
+
+.main__carousel__description {
+    position: relative;
+    z-index: 2;
+    color: var(--complement-color);
+    margin: 0;
+
+}
+
+/* ----- MAIN - WELCOME ----- */
+.main__welcome {
+    max-width: 95vw;
+    font-family: var(--text-font);
+}
+
+.main__welcome h2:first-child {
+    font-family: var(--title-font);
+    text-align: center;
+}
+.main__welcome p:last-child {
+    text-align: justify;
+}
+
+/* ----- MAIN - FOOTER ----- */
+
+.footer {
+    background-color: var(--main-dark-color);
+    font-family: var(--text-font);
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    
+
+}
+.footer__ul {
+    display: flex;
+    justify-content: space-around ;
+    margin: 0;
+    padding: 1.1rem 0;
+}
+.footer__ul>li{
+    list-style: none;
+    
+
+}
+.footer__ul>li:hover{
+    font-weight: bold;
+
+}
+.footer__ul>li>a{
+  color: var(--main-light-color);
+  text-decoration: none;   
+
+}
+/* ----- RESPONSIVE ----- */
+/* Mobile + */
+@media (min-width: 400px) {
+    body {
+        background-color: rgb(53, 39, 23);
+    }
+
+    .header__top__logo {
+        display: block;
+    }
+}
+
+/* Tablettes */
+@media (min-width: 750px) {
+    body {
+        background-color: bisque;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1000px) {
+    body {
+        background-color: rgb(243, 184, 113);
+    }
+}
+
+/* Desktop Wide */
+@media (min-width: 1400px) {
+    body {
+        background-color: rgb(238, 146, 34);
+    }
+}
+
+/* STYLES POUR SCRIPT JAVASCRIPT */
+.hidden {
+    display: none;
+}
