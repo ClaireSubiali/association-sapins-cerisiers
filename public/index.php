@@ -3,43 +3,44 @@
 // Inclusion des classes
 // ----------------------------------------------------------------
 
+require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../app/Controllers/CoreController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
 
 
 // ----------------------------------------------------------------
-// Récupération de la page à afficher
+// AltoRouter pour la gestion des routes
 // ----------------------------------------------------------------
 
-// Vérification si paramètre d'URL '_url' valide 
-if (isset($_GET['_url'])) {
-    $pageToDisplay = $_GET['_url'];
-} else {
-    // par défaut accueil
-    $pageToDisplay = '/';
-}
-
+$router = new AltoRouter();
+$router->setBasePath($_SERVER['BASE_URI']);
 // ----------------------------------------------------------------
 // Définition du tableau des routes
 // ----------------------------------------------------------------
 
-$routes = [
-    // url de la page => nom de la méthode du contrôleur
-    '/' => [
+$router->map(
+    'GET',
+    '/',
+    [
         'controller' => 'MainController',
         'method' => 'home'
     ],
-    '/evenements' => [
+    'main-home'
+
+);
+$router->map(
+    'GET',
+    '/',
+    [
         'controller' => 'EventController',
         'method' => 'events'
-    ]
-];
+    ],
+    'main-events'
 
-// Vérification si page demandée existe (dans les routes définies au dessus)
-if (isset($routes[$pageToDisplay])) {
-
-    $routeInfos = $routes[$pageToDisplay];
-    // Nom controller à instancier
+);
+$match = $router->match();
+if ($match !== false) {
+    $routeInfos = $match['target'];
     $controllerToUse = $routeInfos['controller'];
 
     $methodToCall = $routeInfos['method'];

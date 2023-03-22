@@ -13,11 +13,15 @@ class MainController extends CoreController
      * @return void
      *
      */
+    public function home()
+    {
+        $this->show('home');
+    }
     public function about()
     {
         $this->show('about');
     }
-    
+
     public function contact()
     {
         $this->show('contact');
@@ -31,8 +35,4 @@ class MainController extends CoreController
     {
         $this->show('newsletter');
     }
-    
-
-
-    
 }
