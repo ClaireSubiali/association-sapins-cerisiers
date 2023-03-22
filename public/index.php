@@ -6,6 +6,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../app/Controllers/CoreController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
+require __DIR__ . '/../app/Controllers/EventController.php';
 
 
 // ----------------------------------------------------------------
@@ -13,6 +14,7 @@ require __DIR__ . '/../app/Controllers/MainController.php';
 // ----------------------------------------------------------------
 
 $router = new AltoRouter();
+
 $router->setBasePath($_SERVER['BASE_URI']);
 // ----------------------------------------------------------------
 // Définition du tableau des routes
@@ -25,20 +27,83 @@ $router->map(
         'controller' => 'MainController',
         'method' => 'home'
     ],
-    'main-home'
+    'home'
 
 );
 $router->map(
     'GET',
-    '/',
+    '/a-propos',
     [
-        'controller' => 'EventController',
-        'method' => 'events'
+        'controller' => 'MainController',
+        'method' => 'about'
     ],
-    'main-events'
+    'about'
 
 );
+$router->map(
+    'GET',
+    '/contact',
+    [
+        'controller' => 'MainController',
+        'method' => 'contact'
+    ],
+    'contact'
+
+);
+$router->map(
+    'GET',
+    '/mentions-legales',
+    [
+        'controller' => 'MainController',
+        'method' => 'legalMentions'
+    ],
+    'legal-mentions'
+
+);
+$router->map(
+    'GET',
+    '/newsletter',
+    [
+        'controller' => 'MainController',
+        'method' => 'newsletter'
+    ],
+    'newsletter'
+
+);
+$router->map(
+    'GET',
+    '/a-venir',
+    [
+        'controller' => 'EventController',
+        'method' => 'nextEvents'
+    ],
+    'next-events'
+
+);
+$router->map(
+    'GET',
+    '/nos-evenements',
+    [
+        'controller' => 'EventController',
+        'method' => 'allEvents'
+    ],
+    'all-events'
+
+);
+$router->map(
+    'GET',
+    '/evenement/[i:id]',
+    [
+        'controller' => 'EventController',
+        'method' => 'event'
+    ],
+    'event'
+
+);
+
+//Vérification s'il y a une route qui coreespond à celle demandée
 $match = $router->match();
+
 if ($match !== false) {
     $routeInfos = $match['target'];
     $controllerToUse = $routeInfos['controller'];

@@ -23,11 +23,11 @@
 
         <nav class="header__nav">
             <ul class="header__nav__ul">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A venir</a></li>
-                <li><a href="#">Nos évenements</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?= $router->generate('home') ?>">Accueil</a></li>
+                <li><a href="<?= $router->generate('next-events') ?>">A venir</a></li>
+                <li><a href="<?= $router->generate('all-events') ?>">Nos évenements</a></li>
+                <li><a href="<?= $router->generate('about') ?>">A propos</a></li>
+                <li><a href="<?= $router->generate('contact') ?>">Contact</a></li>
             </ul>
         </nav>
     </header>
