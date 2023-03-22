@@ -3,7 +3,9 @@
 // Inclusion des classes
 // ----------------------------------------------------------------
 
+require __DIR__ . '/../app/Controllers/CoreController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
+
 
 // ----------------------------------------------------------------
 // Récupération de la page à afficher
@@ -23,19 +25,28 @@ if (isset($_GET['_url'])) {
 
 $routes = [
     // url de la page => nom de la méthode du contrôleur
-    '/' => 'home'
+    '/' => [
+        'controller' => 'MainController',
+        'method' => 'home'
+    ],
+    '/evenements' => [
+        'controller' => 'EventController',
+        'method' => 'events'
+    ]
 ];
 
 // Vérification si page demandée existe (dans les routes définies au dessus)
 if (isset($routes[$pageToDisplay])) {
 
-    // Instance du controller
-    $controller = new MainController();
+    $routeInfos = $routes[$pageToDisplay];
+    // Nom controller à instancier
+    $controllerToUse = $routeInfos['controller'];
 
-    // Méthode correspondant à la route
-    $methodToCall = $routes[$pageToDisplay];
+    $methodToCall = $routeInfos['method'];
 
-    // appel de la méthode correspondante du controller
+    // Instanciation
+    $controller = new $controllerToUse();
+
     $controller->$methodToCall();
 } else {
     // Page 404

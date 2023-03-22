@@ -1,6 +1,6 @@
 <?php
 
-class MainController
+class MainController extends CoreController
 {
     public function pageNotFound()
     {
@@ -13,24 +13,26 @@ class MainController
      * @return void
      *
      */
-    public function home()
+    public function about()
     {
-        // Délègue l'affichage à la méthode "show" du MainController
-        $this->show('home');
+        $this->show('about');
+    }
+    
+    public function contact()
+    {
+        $this->show('contact');
+    }
+    public function legalMentions()
+    {
+        $this->show('legal-mentions');
     }
 
-
-    /**
-     * Generate HTML of a page with all necessary templates - private function
-     *
-     * @param string $viewName name of the view (route)
-     * @param array $viewData array with all data to display in the view
-     * @return void
-     */
-    private function show($viewName, $viewData = [])
+    public function newsletter()
     {
-        require_once __DIR__ . '/../views/header.tpl.php';
-        require_once __DIR__ . '/../views/' . $viewName . '.tpl.php';
-        require_once __DIR__ . '/../views/footer.tpl.php';
+        $this->show('newsletter');
     }
+    
+
+
+    
 }

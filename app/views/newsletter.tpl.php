@@ -1,0 +1,1 @@
+<p style="font-size: 3rem;">Newsletter</p>
