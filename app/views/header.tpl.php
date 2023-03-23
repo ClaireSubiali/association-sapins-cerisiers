@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Sapins aux Cerisiers</title>
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <div class="header__top">
             <img class="header__top__logo" src="assets/images/logo-removebg-preview.png" alt="#">

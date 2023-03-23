@@ -1,0 +1,87 @@
+@use './../variables.scss' as var;
+
+/* ------------------------ */
+/* ----- HEADER - NAV ----- */
+/* ------------------------ */
+
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    display: none;
+}
+
+.header__nav__ul {
+    font-family: var.$text-font;
+    background-color: var.$main-dark-color;
+    width: 100vw;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+}
+
+.header__nav__ul>li {
+    background-color: var.$main-dark-color;
+    list-style: none;
+    padding: .3rem 0 .3rem 2.6rem;
+}
+
+.header__nav__ul>li>a {
+    color: var.$main-light-color;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.header__nav__ul>li:hover {
+    background-color: var.$main-dark-color-lighter;
+    background-origin: border-box;
+    font-weight: bold;
+}
+
+
+
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+    .header__nav__ul>li {
+        padding-left: 35%;
+    }
+}
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+    .header__nav {
+        display: block;
+    }
+
+    .header__nav__ul {
+        display: flex;
+        justify-content: center;
+        position: static;
+        padding-bottom: 1rem;
+    }
+
+    .header__nav__ul>li {
+        padding: 0 1rem;
+    }
+
+    .header__nav__ul>li>a {
+        font-size: 1.3rem;
+    }
+
+
+}
+
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+    .header__nav__ul>li>a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {
+    
+}
+
+

@@ -1,0 +1,73 @@
+@use './../variables.scss' as var;
+
+.body {
+    background-color: rgb(243, 184, 113);
+    margin: 0;
+    position: relative;
+    padding: 0;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 0 0;
+}
+
+/* ----- MAIN - WELCOME ----- */
+.main__welcome {
+    margin: 2rem .5rem 0;
+    padding: 0 1rem;
+    font-family: var.$text-font;
+    background-color: #a53c4891;
+}
+
+.main__welcome h2:first-child {
+    font-family: var.$title-font;
+    text-align: center;
+}
+
+.main__welcome p:last-child {
+    text-align: justify;
+}
+
+
+
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+    .main {
+        padding-top: .5rem;
+    }
+    .main__welcome {
+        margin: 0;
+        width: 80vw;
+        padding: 0 1rem;
+        font-family: var.$text-font;
+        background-color: #a53c4891;
+    }
+}
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+    .main {
+        padding-top: 2rem;
+    }
+
+}
+
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+    
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {
+    
+}
+
+
+
+

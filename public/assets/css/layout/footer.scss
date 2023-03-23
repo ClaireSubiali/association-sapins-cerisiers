@@ -1,0 +1,68 @@
+/* ----- MAIN - FOOTER ----- */
+@use './../variables.scss' as var;
+
+.footer {
+    background-color: var.$main-dark-color;
+    font-family: var.$text-font;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    display: flex;
+    justify-content:center;
+}
+
+.footer__ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+    padding: 1.1rem 0;
+}
+
+.footer__ul>li {
+    list-style: none;
+    margin: 0;
+}
+
+.footer__ul>li:hover {
+    font-weight: bold;
+}
+
+.footer__ul>li>a {
+    color: var.$main-light-color;
+    text-decoration: none;
+}
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+
+    .footer__ul {
+        margin: 0 15%;
+    }
+
+}
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+
+    .footer__ul {
+        width: 60%;
+    }
+}
+
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+     
+    .footer {
+        height: 4rem;
+    }
+
+    .footer__ul>li>a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {
+    
+}
