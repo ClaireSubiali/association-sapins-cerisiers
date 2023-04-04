@@ -17,7 +17,7 @@
         <div class="header__top">
             <img class="header__top__logo" src="assets/images/logo-removebg-preview.png" alt="#">
             <h1 class="header__top__title">Des&nbspSapins aux&nbspCerisiers</h1>
-            <div class="header__top__menu-button">Menu</div>
+            <div class="header__top__menu-button menu-button">Menu</div>
         </div>
 
         <nav class="header__nav">
@@ -25,6 +25,7 @@
                 <li><a href="<?= $router->generate('home') ?>">Accueil</a></li>
                 <li><a href="<?= $router->generate('next-events') ?>">A venir</a></li>
                 <li><a href="<?= $router->generate('all-events') ?>">Nos évenements</a></li>
+                <li><a href="<?= $router->generate('gallery') ?>">Galerie</a></li>
                 <li><a href="<?= $router->generate('about') ?>">A propos</a></li>
                 <li><a href="<?= $router->generate('contact') ?>">Contact</a></li>
             </ul>

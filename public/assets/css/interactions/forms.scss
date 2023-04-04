@@ -1,0 +1,53 @@
+@use './../variables.scss'as var;
+
+.contact__part--first{
+    display: flex;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var.$text-font;
+
+  .contact__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+    .contact__label {
+      margin-bottom: 5px;
+      color: var.$main-dark-color;
+      font-weight: bold;
+    }
+
+    .contact__input {
+      border: 1px solid var.$main-dark-color;
+      padding: 4px;
+      width: 100%;
+
+      &--nom, &--prenom {
+        width: 48%;
+        
+      }
+
+      &--message {
+        height: 150px;
+
+      }
+    }
+  }
+
+  .contact__submit {
+    background-color: var.$main-dark-color;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken(var.$main-dark-color, 10%);
+    }
+  }
+}

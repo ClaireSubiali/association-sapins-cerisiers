@@ -22,7 +22,7 @@
     margin: 2rem .5rem 0;
     padding: 0 1rem;
     font-family: var.$text-font;
-    background-color: #a53c4891;
+    background-color: var.$other;
 }
 
 .main__welcome h2:first-child {
@@ -33,9 +33,6 @@
 .main__welcome p:last-child {
     text-align: justify;
 }
-
-
-
 
 /* Mobile + */
 @media (min-width: var.$responsive-mobile-plus) {

@@ -12,19 +12,16 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 0 1rem;
-    background-color: var.$main-dark-color;
-    font-size: .9rem;
+    background-color: var.$main-dark-color;    
 }
 
 .header__top__title {
-    font-family: var.$title-font;
-    font-size: 1.3rem;
+    font-family: var.$title-font;   
     color: var.$main-light-color;
 }
 
 .header__top__menu-button {
-    font-family: var.$title-font;
-    font-size: 1rem;
+    font-family: var.$title-font;    
     color: var.$main-light-color;
 }
 
@@ -64,8 +61,7 @@
         justify-content: center;
     }
 
-    .header__top__title {
-        font-size: 2.5rem;
+    .header__top__title {        
         padding-left: 1.5rem;
         align-self: center;
     }
@@ -80,10 +76,6 @@
 
     .header__top {
         height: 8rem;
-    }
-
-    .header__top__title {
-        font-size: 4rem;
     }
 
     .header__top__logo {

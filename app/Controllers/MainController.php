@@ -35,4 +35,8 @@ class MainController extends CoreController
     {
         $this->show('newsletter');
     }
+    public function gallery()
+    {
+        $this->show('gallery');
+    }
 }

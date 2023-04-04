@@ -1,0 +1,1 @@
+<h2>Galerie photo de nos évènements</h2>

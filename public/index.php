@@ -42,6 +42,16 @@ $router->map(
 );
 $router->map(
     'GET',
+    '/galerie',
+    [
+        'controller' => 'MainController',
+        'method' => 'gallery'
+    ],
+    'gallery'
+
+);
+$router->map(
+    'GET',
     '/contact',
     [
         'controller' => 'MainController',
@@ -92,7 +102,7 @@ $router->map(
 );
 $router->map(
     'GET',
-    '/evenement/[i:id]',
+    '/evenement',
     [
         'controller' => 'EventController',
         'method' => 'event'

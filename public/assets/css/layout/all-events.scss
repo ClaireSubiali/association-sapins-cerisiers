@@ -1,0 +1,31 @@
+@use './../variables.scss'as var;
+
+.all-event-wrapper{
+    padding: 1rem;
+}
+.all-event-event__next-date__title {
+    text-decoration: underline;
+}
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+    .all-event-event{
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+
+}
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+    .all-event-wrapper{
+        margin-bottom: 3rem;
+    }
+
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {}

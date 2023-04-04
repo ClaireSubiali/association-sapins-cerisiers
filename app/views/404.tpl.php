@@ -1,1 +1,1 @@
-<p style="font-size: 3rem;">PAGE 404</p>
+<h2>La page demandée n'a pas été trouvée: erreur 404</h2>

@@ -1,0 +1,33 @@
+@use './../variables.scss'as var;
+.about__image{
+    width: 100%;
+    margin: auto;
+    margin: 1rem 0;
+}
+.about{
+    padding: 1rem;
+}
+
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+    .about{
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+
+}
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+    .about{
+        margin-bottom: 3rem;
+    }
+
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {}

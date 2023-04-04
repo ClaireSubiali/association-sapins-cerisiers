@@ -1,0 +1,98 @@
+/* Changements de taille de typo selon les éléments et le responsive */
+@use './../variables.scss'as var;
+
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var.$main-dark-color;
+    font-family: var.$title-font;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-family: var.$text-font;
+}
+p, div{
+    font-size: 1rem;
+    font-family: var.$text-font;
+    text-align: justify;
+    
+}
+
+//liens dans la nav principale
+nav>ul>li>a 
+{
+    font-size: 1.8rem;
+}
+
+/* Mobile + */
+@media (min-width: var.$responsive-mobile-plus) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+    p, div{
+        font-size: 1.15rem;
+    }
+    
+}
+
+/* Tablet */
+@media (min-width: var.$responsive-tablet) {
+    h1 {
+        font-size: 2.9rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 1.8rem;
+    
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+    p, div{
+        font-size: 1.3rem;
+    }
+    nav>ul>li>a, footer>ul>li>a {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* Desktop */
+@media (min-width: var.$responsive-desktop) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+    p,div{
+        font-size: 1.4rem;
+    }
+    nav>ul>li>a, footer>ul>li>a {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop Wide */
+@media (min-width: var.$responsive-desktop-wide) {}

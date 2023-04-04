@@ -1,1 +1,1 @@
-<p style="font-size: 3rem;">Un évenement</p>
+<h2>Page d'un évènement</h2>

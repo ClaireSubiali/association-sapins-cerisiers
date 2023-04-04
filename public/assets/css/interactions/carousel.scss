@@ -113,9 +113,10 @@ polyline {
 /* Mobile + */
 @media (min-width: var.$responsive-mobile-plus) {
 
-  .main__carousel__title-date>* {
-    font-size: 140%;
-}
+  .main__carousel__title-date div:last-child {
+    font-size: 1.3rem;
+    margin-top: 7.8rem;
+    }
 
 .main__carousel {
     margin: 1rem;
@@ -130,9 +131,6 @@ polyline {
     width: 80vw;        
     height: 12rem;
     display: block;
-}
-.main__carousel__title-date div:last-child {
-  margin-top: 7.8rem;
 }
 
 .arrow.left {
@@ -149,15 +147,11 @@ polyline {
     height: 15rem;
 }
 
-
 .main__carousel__title-date div:last-child {
     margin-top: 9.8rem;
     font-size: 2rem;
 }
 
-.main__carousel__title-date h3:first-child {
-    font-size: 2rem;
-}
 }
 
 /* Desktop */
@@ -168,10 +162,6 @@ polyline {
 
 .main__carousel__title-date div:last-child {
     margin-top: 10.9rem;
-    font-size: 2.2rem;
-}
-
-.main__carousel__title-date h3:first-child {
     font-size: 2.2rem;
 }
 

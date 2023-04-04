@@ -1,1 +1,1 @@
-<p style="font-size: 3rem;">Mentions légales</p>
+<h2>Mentions légales</h2>

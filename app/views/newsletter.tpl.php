@@ -1,1 +1,1 @@
-<p style="font-size: 3rem;">Newsletter</p>
+<h2>Inscription à la newsletter</h2>
