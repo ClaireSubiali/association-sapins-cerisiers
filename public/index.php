@@ -7,6 +7,8 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../app/Controllers/CoreController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
 require __DIR__ . '/../app/Controllers/EventController.php';
+require __DIR__ . '/../app/Models/Type.php';
+require __DIR__ . '/../app/Utils/Database.php';
 
 
 // ----------------------------------------------------------------

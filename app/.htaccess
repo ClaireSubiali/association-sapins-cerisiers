@@ -1,0 +1,4 @@
+# On bloque l'accès au répertoire app/ qui va contenir le code
+# applicatif de notre site.
+# Cela bloque l'accès également aux sous-répertoires.
+Deny from all
