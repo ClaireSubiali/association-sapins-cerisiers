@@ -1,6 +1,6 @@
 <?php
 
-class Event 
+class Event
 {
     private $id;
     private $title;
@@ -12,10 +12,18 @@ class Event
     private $updated_at;
     private $type_id;
 
+    public function findAll()
+    {
+        $pdo = Database::getPDO();
+        $sql = 'SELECT * FROM `Event` ORDER BY `date`';
+        $pdoStatement = $pdo->query($sql);
+        $results = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Event');
 
+        return $results;
+    }
     /**
      * Get the value of id
-     */ 
+     */
     public function getId()
     {
         return $this->id;
@@ -23,7 +31,7 @@ class Event
 
     /**
      * Get the value of title
-     */ 
+     */
     public function getTitle()
     {
         return $this->title;
@@ -31,7 +39,7 @@ class Event
 
     /**
      * Get the value of date
-     */ 
+     */
     public function getDate()
     {
         return $this->date;
@@ -39,7 +47,7 @@ class Event
 
     /**
      * Get the value of location
-     */ 
+     */
     public function getLocation()
     {
         return $this->location;
@@ -47,7 +55,7 @@ class Event
 
     /**
      * Get the value of image
-     */ 
+     */
     public function getImage()
     {
         return $this->image;
@@ -55,7 +63,7 @@ class Event
 
     /**
      * Get the value of description
-     */ 
+     */
     public function getDescription()
     {
         return $this->description;

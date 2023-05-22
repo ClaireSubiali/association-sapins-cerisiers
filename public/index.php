@@ -87,7 +87,7 @@ $router->map(
     '/a-venir',
     [
         'controller' => 'EventController',
-        'method' => 'nextEvents'
+        'method' => 'list'
     ],
     'next-events'
 
